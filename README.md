@@ -1,7 +1,7 @@
 # Hi, I'm Nashif 👋  
 
 I'm a web developer who enjoys coding, breaking things, fixing them again, and learning something new in the process.  
-I’m passionate about **coding, design, and learning how things actually work behind the scenes**.
+I’m passionate about **coding, design, and learning how things actually work behind the scenes**.            
 I like experimenting with projects, exploring ideas, and turning curiosity into code.  
 
 ## I mostly work with:
