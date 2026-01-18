@@ -3,72 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nashif's portfolio</title>
-</head>
-<body>
+    <meta name="description" content="web developer who enjoys coding. ">
+    <meta name="author" content="nashif">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>nights</title>
+    
+    <meta property="og:title" content="nights - nashif's tiny corner">
+    <meta property="og:description" content="web developer who enjoys coding.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nashift.github.io/nashift/">
+    <meta property="og:image" content="https://nashift.github.io/nashift/og-image.png" />
+    <meta property="og:site_name" content="nights - nashif's tiny corner">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 90vh;
-            margin: auto;
+            min-height: 100vh;
+            margin: 0;
+            padding: 10px;
             font-family: 'Courier New', Courier, monospace;
+            background: #1a1a2e;
+            overflow: hidden;
         }
-        .one, .two, .three {
-            border: 2px solid black;
-            padding: 20px;
-            width: 60%;
+        
+        .container {
+            max-width: 700px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .box {
+            background: rgba(255, 255, 255, 0.95);
+            border: 3px solid #000;
+            padding: 30px;
             box-sizing: border-box;
-            margin: 20px 0;
+            margin: 15px 0;
+            box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            position: relative;
         }
-        .one h1 {
+        
+        .box:nth-child(1),
+        .box:nth-child(3) {
+            z-index: 10;
+        }
+        
+        .box:nth-child(2) {
+            z-index: 1;
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+        }
+        
+        h1, h2, h3 {
             margin-top: 0;
         }
-        .two a {
-            display: block;
-            margin: 10px 0;
+        
+        a {
+            display: inline-block;
+            margin: 10px 15px 10px 0;
             text-decoration: none;
-            color: blue;
+            color: #0066cc;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
-        .three img {
-            display: block;
-            margin: auto;
+        
+        a:hover {
+            color: #ff6b6b;
         }
-        </style>
-    <div class="one">
-        <h1>nashif's portfolio</h1>
-        <h3>hii</h3>
-        <p>my name is nashif,</p>
-        <p>i am a web developer. i like to code and design.</p>
-    </div>
-    <div class="two">
-        <h2>contact me</h2>
-        <a href="https://github.com/nashift">github</a>
-        <a href="https://linkedin.com/in/nashift">linkedin</a>
-        <a href="mailto:nashift04@gmail.com">email me</a>
-        <a href="https://wa.me/+918590319905?text=hi,%20how%20are%20you">whatsapp</a>
-    </div>
-    <div class="three">
-        <img src="https://media.giphy.com/media/3o6ZtpWzz665eMJGWQ/giphy.gif" 
-        alt="you can't see, can you?" 
-        style="animation: float 20s ease-in-out infinite; width: 100px;">
-        <style>
-            @keyframes float {
-            0%  { transform: translateY(0px); }
-            10% { transform: translateY(-10px); }
-            20% { transform: translateY(0px); }
-            30% { transform: translateY(-10px); }
-            40% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            60% { transform: translateY(-0px); }
-            70% { transform: translateY(-10px); }
-            80% { transform: translateY(0px); }
-            90% { transform: translateY(-150px); }
-            100% { transform: translateY(0px); }
-            }
-        </style>
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: #f5f5f5;
+            border: 2px solid #333;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        .tech-item i {
+            font-size: 1.3em;
+        }
+        
+        .fa-js { color: #f7df1e; }
+        .fa-react { color: #61dafb; }
+        .fa-node { color: #68a063; }
+        .fa-database { color: #4db33d; }
+        .fa-html5 { color: #e34c26; }
+        .fa-python { color: #3776ab; }
+        .fa-git-alt { color: #f34f29; }
+        .fa-water { color: #38bdf8; }
+        .fa-wind { color: #38bdf8; }
+        .fa-star { color: #228B22; }
+
+        .floating-emoji {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+        }
+        
+        .moon {
+            font-size: 3em;
+            animation: floatAround 15s ease-in-out infinite;
+        }
+        
+        .jupiter {
+            font-size: 3.5em;
+            animation: floatAround2 18s ease-in-out infinite;
+        }
+        
+        .star1 {
+            font-size: 2em;
+            animation: floatAround3 12s ease-in-out infinite;
+        }
+        
+        .star2 {
+            font-size: 1.5em;
+            animation: floatAround4 14s ease-in-out infinite;
+        }
+        
+        .star3 {
+            font-size: 2.5em;
+            animation: floatAround5 16s ease-in-out infinite;
+        }
+        
+        .star4 {
+            font-size: 1.8em;
+            animation: floatAround6 11s ease-in-out infinite;
+        }
+        
+        .star5 {
+            font-size: 2.2em;
+            animation: floatAround7 13s ease-in-out infinite;
+        }
+        
+        @keyframes floatAround {
+            0% { top: 10%; left: 10%; transform: rotate(0deg); }
+            25% { top: 30%; left: 80%; transform: rotate(90deg); }
+            50% { top: 70%; left: 70%; transform: rotate(180deg); }
+            75% { top: 60%; left: 20%; transform: rotate(270deg); }
+            100% { top: 10%; left: 10%; transform: rotate(360deg); }
+        }
+        
+        @keyframes floatAround2 {
+            0% { top: 80%; left: 80%; }
+            25% { top: 20%; left: 60%; }
+            50% { top: 40%; left: 15%; }
+            75% { top: 75%; left: 30%; }
+            100% { top: 80%; left: 80%; }
+        }
+        
+        @keyframes floatAround3 {
+            0% { top: 50%; left: 90%; }
+            25% { top: 25%; left: 70%; }
+            50% { top: 65%; left: 40%; }
+            75% { top: 35%; left: 10%; }
+            100% { top: 50%; left: 90%; }
+        }
+        
+        @keyframes floatAround4 {
+            0% { top: 30%; left: 30%; }
+            25% { top: 70%; left: 85%; }
+            50% { top: 20%; left: 50%; }
+            75% { top: 55%; left: 15%; }
+            100% { top: 30%; left: 30%; }
+        }
+        
+        @keyframes floatAround5 {
+            0% { top: 15%; left: 50%; }
+            25% { top: 60%; left: 75%; }
+            50% { top: 80%; left: 25%; }
+            75% { top: 40%; left: 45%; }
+            100% { top: 15%; left: 50%; }
+        }
+        
+        @keyframes floatAround6 {
+            0% { top: 45%; left: 25%; }
+            25% { top: 15%; left: 80%; }
+            50% { top: 75%; left: 60%; }
+            75% { top: 25%; left: 35%; }
+            100% { top: 45%; left: 25%; }
+        }
+        
+        @keyframes floatAround7 {
+            0% { top: 65%; left: 50%; }
+            25% { top: 35%; left: 20%; }
+            50% { top: 50%; left: 85%; }
+            75% { top: 20%; left: 40%; }
+            100% { top: 65%; left: 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-emoji moon">🌕</div>
+    <div class="floating-emoji jupiter">🪐</div>
+    <div class="floating-emoji star1">⭐</div>
+    <div class="floating-emoji star2">⭐</div>
+    <div class="floating-emoji star3">⭐</div>
+    <div class="floating-emoji star4">⭐</div>
+    <div class="floating-emoji star5">⭐</div>
+    
+    <div class="container">
+        <div class="box">
+            <h2>hi, i'm nashif 👋</h2>
+            <p>
+                i'm a web developer who enjoys coding, breaking things, fixing them again,
+                and learning something new in the process.
+            </p>
+            <p>
+                i'm passionate about <b>coding, design, and learning how things actually
+                work behind the scenes</b>.
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>tech i mess around with</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fa-brands fa-js"></i>
+                    <span>javascript</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-react"></i>
+                    <span>react</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-node"></i>
+                    <span>node.js</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-database"></i>
+                    <span>mongodb</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>html/css</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <span>git</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>tailwind</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <h2>Contact me</h2>
+            <a href="https://github.com/nashift" target="_blank">
+                <i class="fa-brands fa-github"></i> github
+            </a>
+            <a href="https://linkedin.com/in/nashif-t-587713320" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> linkedin
+            </a>
+            <a href="mailto:nashift04@gmail.com">
+                <i class="fa-solid fa-envelope"></i> email me
+            </a>
+            <a href="https://wa.me/+918590319905?text=hi%20nashif,%20how%20are%20you" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> say hi
+            </a>
+            <a href="https://nashif.vercel.app/" target="_blank">
+                <i class="fa-solid fa-star"></i> 
+            </a>
+        </div>
     </div>
 </body>
 </html>
