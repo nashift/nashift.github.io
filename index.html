@@ -24,7 +24,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 10px;
+            padding: 0 15px;
             font-family: 'Courier New', Courier, monospace;
             background: #1a1a2e;
             overflow: hidden;
@@ -129,7 +129,7 @@
         
         .jupiter {
             font-size: 3.5em;
-            animation: floatAround2 18s ease-in-out infinite;
+            animation: floatAround2 10s ease-in-out infinite;
         }
         
         .star1 {
@@ -149,12 +149,12 @@
         
         .star4 {
             font-size: 1.8em;
-            animation: floatAround6 11s ease-in-out infinite;
+            animation: floatAround6 10s ease-in-out infinite;
         }
         
         .star5 {
             font-size: 2.2em;
-            animation: floatAround7 13s ease-in-out infinite;
+            animation: floatAround7 9s ease-in-out infinite;
         }
         
         @keyframes floatAround {
@@ -166,51 +166,51 @@
         }
         
         @keyframes floatAround2 {
-            0% { top: 80%; left: 80%; }
-            25% { top: 20%; left: 60%; }
-            50% { top: 40%; left: 15%; }
-            75% { top: 75%; left: 30%; }
-            100% { top: 80%; left: 80%; }
+            0% { top: 80%; left: 80%;  transform: rotate(0deg); }
+            25% { top: 20%; left: 60%; transform: rotate(90deg); }
+            50% { top: 40%; left: 15%; transform: rotate(180deg); }
+            75% { top: 75%; left: 30%; transform: rotate(270deg); }
+            100% { top: 80%; left: 80%; transform: rotate(360deg); }
         }
         
         @keyframes floatAround3 {
-            0% { top: 50%; left: 90%; }
-            25% { top: 25%; left: 70%; }
-            50% { top: 65%; left: 40%; }
-            75% { top: 35%; left: 10%; }
-            100% { top: 50%; left: 90%; }
+            0% { top: 50%; left: 90%;  transform: rotate(0deg); }
+            25% { top: 25%; left: 70%; transform: rotate(90deg); }
+            50% { top: 65%; left: 40%; transform: rotate(180deg); }
+            75% { top: 35%; left: 10%; transform: rotate(270deg); }
+            100% { top: 50%; left: 90%; transform: rotate(360deg); }
         }
         
         @keyframes floatAround4 {
-            0% { top: 30%; left: 30%; }
-            25% { top: 70%; left: 85%; }
-            50% { top: 20%; left: 50%; }
-            75% { top: 55%; left: 15%; }
-            100% { top: 30%; left: 30%; }
+            0% { top: 30%; left: 30%; transform: rotate(0deg); }
+            25% { top: 70%; left: 85%; transform: rotate(90deg); }
+            50% { top: 20%; left: 50%; transform: rotate(180deg); }
+            75% { top: 55%; left: 15%; transform: rotate(270deg); }
+            100% { top: 30%; left: 30%; transform: rotate(360deg); }
         }
         
         @keyframes floatAround5 {
-            0% { top: 15%; left: 50%; }
-            25% { top: 60%; left: 75%; }
-            50% { top: 80%; left: 25%; }
-            75% { top: 40%; left: 45%; }
-            100% { top: 15%; left: 50%; }
+            0% { top: 15%; left: 50%; transform: rotate(0deg); }
+            25% { top: 60%; left: 75%; transform: rotate(90deg); }
+            50% { top: 80%; left: 25%; transform: rotate(180deg); }
+            75% { top: 40%; left: 45%; transform: rotate(270deg); }
+            100% { top: 15%; left: 50%; transform: rotate(360deg); }
         }
         
         @keyframes floatAround6 {
-            0% { top: 45%; left: 25%; }
-            25% { top: 15%; left: 80%; }
-            50% { top: 75%; left: 60%; }
-            75% { top: 25%; left: 35%; }
-            100% { top: 45%; left: 25%; }
+            0% { top: 45%; left: 25%; transform: rotate(0deg); }
+            25% { top: 15%; left: 80%; transform: rotate(90deg); }
+            50% { top: 75%; left: 60%; transform: rotate(180deg); }
+            75% { top: 25%; left: 35%; transform: rotate(270deg); }
+            100% { top: 45%; left: 25%; transform: rotate(360deg); }
         }
         
         @keyframes floatAround7 {
-            0% { top: 65%; left: 50%; }
-            25% { top: 35%; left: 20%; }
-            50% { top: 50%; left: 85%; }
-            75% { top: 20%; left: 40%; }
-            100% { top: 65%; left: 50%; }
+            0% { top: 65%; left: 50%; transform: rotate(0deg); }
+            25% { top: 35%; left: 20%; transform: rotate(90deg); }
+            50% { top: 50%; left: 85%; transform: rotate(180deg); }
+            75% { top: 20%; left: 40%; transform: rotate(270deg); }
+            100% { top: 65%; left: 50%; transform: rotate(360deg); }
         }
     </style>
 </head>
