@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import './Contact.css';
 
 const Contact = () => {
     const [showPopup, setShowPopup] = useState(false);

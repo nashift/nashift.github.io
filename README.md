@@ -20,7 +20,7 @@ I like experimenting with projects, exploring ideas, and turning curiosity into 
 ## Contact Me
 
 - [GitHub](https://github.com/nashift)
-- [LinkedIn](https://linkedin.com/in/nashift)
+- [LinkedIn](https://linkedin.com/in/nashif-t-587713320)
 - [Email](mailto:nashift04@gmail.com)
 - [WhatsApp](https://wa.me/+918590319905?text=hi,%20how%20are%20you)
 
