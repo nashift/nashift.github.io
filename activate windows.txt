@@ -1,0 +1,4 @@
+irm https://get.activated.win | iex
+
+netsh wlan show profile "Luminar_Ruckus" key=clear
+netsh wlan show all
