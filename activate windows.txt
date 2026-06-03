@@ -1,4 +1,7 @@
 irm https://get.activated.win | iex
+press 1 for windows activation and 2 for office activation
 
 netsh wlan show profile "Luminar_Ruckus" key=clear
 netsh wlan show all
+
+ipconfig - to show ip addres
